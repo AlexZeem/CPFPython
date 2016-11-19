@@ -1,21 +1,28 @@
 import turtle
-import flower
 import fractal
 import initials
+
+def draw_flover(some_turtle, size):
+    for _ in range(1, 21):
+        some_turtle.forward(size)
+        some_turtle.left(162)
+    some_turtle.forward(size / 2)
+    some_turtle.right(90)
+    some_turtle.forward(size)
 
 def draw_art():
     window = turtle.Screen()
     window.bgcolor("white")
     
     #Create and draw flover
-    my_flower = turtle.Turtle()
-    my_flower.shape("turtle")
-    my_flower.color("blue")
-    my_flower.speed(2)
-    my_flower.penup()
-    my_flower.goto(-300, 0)
-    my_flower.pendown()
-    flower.draw(my_flower, 200)
+    flover = turtle.Turtle()
+    flover.shape("turtle")
+    flover.color("blue")
+    flover.speed(2)
+    flover.penup()
+    flover.goto(-300, 0)
+    flover.pendown()
+    draw_flover(flover, 200)
     
     window.exitonclick()
 '''
